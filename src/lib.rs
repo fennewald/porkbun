@@ -258,12 +258,6 @@ pub fn pricing() -> Result<HashMap<String, Price>, Error> {
     api::request("/pricing/get", &())
 }
 
-fn main() {
-    let client = Client::from_env().unwrap();
-    println!("ping: {:?}", client.ping());
-    println!("dns: {:?}", client.list_dns("fennewald.blog"));
-}
-
 #[cfg(test)]
 mod tests {
     use super::*;
